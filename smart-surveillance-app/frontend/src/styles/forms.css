@@ -1,0 +1,324 @@
+/* ====== Form Grid ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+.form-grid .full-width { grid-column: span 2; }
+
+/* ====== Input Fields ====== */
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #1976d2;
+  background: #f9f9f9;
+  color: #000;
+}
+.input-field.half-width { flex: 1; min-width: 200px; }
+.input-field.full-width { width: 100%; }
+
+/* ====== Buttons ====== */
+.primary-btn, .secondary-btn, .icon-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.primary-btn { background: #1976d2; color: #fff; }
+.primary-btn:hover { background: #1565c0; }
+.secondary-btn { background: #6b7280; color: #fff; }
+.secondary-btn:hover { background: #4b5563; }
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.success-btn { background: #16a34a; color: #fff; }
+.success-btn:hover { background: #15803d; }
+.edit-btn { background: #3b82f6; color: #fff; }
+.edit-btn:hover { background: #2563eb; }
+.danger-btn { background: #ef4444; color: #fff; }
+.danger-btn:hover { background: #dc2626; }
+.cancel-btn { background: #6b7280; color: #fff; }
+.cancel-btn:hover { background: #4b5563; }
+
+/* ====== Actions ====== */
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.icon-btn:hover { transform: scale(1.2); }
+.update-btn { color: #007bff; }
+.update-btn:hover { color: #0056b3; }
+.danger-action { color: #dc3545; }
+.danger-action:hover { color: #a71d2a; }
+
+/* ====== Tables ====== */
+.table-container { flex: 1; width: 100%; overflow-x: auto; margin-top: 1rem; }
+.camera-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  overflow: hidden;
+}
+.camera-table th, .camera-table td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  text-align: left;
+}
+.camera-table th {
+  background-color: #0d47a1;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.camera-table th.sortable:hover { background-color: #1976d2; }
+.camera-table td { color: #333; }
+.row-even { background-color: #f9f9f9; }
+.row-odd { background-color: #ffffff; }
+.camera-table tr:last-child td { border-bottom: 1px solid #ccc; }
+.camera-table.bordered { border: 2px solid #ccc; border-radius: 8px; }
+
+/* Table cell variants */
+.camera-table td button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+.camera-table tr.has-access td {
+  background-color: #e6ffe6; /* light green */
+  font-weight: 600;
+}
+.camera-table td .input-field {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+.camera-table td select.input-field {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.camera-table td .edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+.camera-table td .icon-btn {
+  font-size: 1.1rem;
+  padding: 4px;
+}
+.camera-table td.coords-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ====== Pagination ====== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.page-info { color: #333; font-weight: 500; }
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: 600;
+  background: #f5f5f5;
+}
+.pagination button:hover { background: #e0e0e0; }
+.pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ====== Forms ====== */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ====== Module Card ====== */
+.module-card {
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+.info-box, .register-form {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+}
+.alert-text { color: #d9534f; font-weight: 500; }
+.loading-text { color: #0275d8; font-style: italic; }
+.button-group button { margin-right: 10px; }
+
+/* ====== Tabs ====== */
+.tab-header {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+.tab-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: #d1d5db;
+  transition: all 0.2s ease;
+}
+.tab-btn.active {
+  background: #1976d2;
+  color: #fff;
+}
+.dropdown-menu button:active { background: #ddd; }
+
+/* ====== Archive Snapshots Panel ====== */
+.archive-snapshots-container {
+  padding: 24px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+.archive-snapshots-title {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+.archive-snapshots-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.archive-snapshots-label {
+  display: block;
+  color: white;
+  margin-bottom: 8px;
+}
+.archive-snapshots-date-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.archive-snapshots-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ====== Snapshots Tab ====== */
+.snapshots-container {
+  padding: 24px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+.snapshots-title {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+.snapshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.snapshot-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snapshot-image-wrapper {
+  width: 100%;
+  height: 180px;
+  background: #000;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.snapshot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.snapshot-details {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #1f2937;
+  text-align: center;
+  line-height: 1.4;
+}
+.selected-camera-label {
+  font-weight: 600;        /* bold but not too heavy */
+  font-size: 1rem;         /* readable size */
+  color: #1e3a8a;          /* deep blue to match your primary theme */
+  margin-right: 12px;      /* spacing before the button */
+  padding: 4px 8px;        /* subtle padding for balance */
+  border-radius: 6px;      /* rounded edges for a polished look */
+  background-color: #f0f4ff; /* soft background highlight */
+}
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ two equal halves */
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 100%; /* ✅ each input fills its grid cell */
+}
+
+.stream-url-input {
+  grid-column: 1 / -1;   /* ✅ span across both halves */
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+}
+

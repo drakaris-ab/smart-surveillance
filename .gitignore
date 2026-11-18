@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Model weights (large files)
+*.pt
+*.pth
+*.onnx
+*.weights
+*.whl
+
+# Distribution / build outputs
+dist/
+build/
+*.egg-info/
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite / Frontend build
+frontend/build/
+frontend/dist/
+
+# PyInstaller / Executables
+*.spec
+
+# Snapshots / temporary files
+snapshots/
+*.tmp
+*.temp
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.coverage.*
+
+# TypeScript
+*.tsbuildinfo
+
+# Local development
+*.local

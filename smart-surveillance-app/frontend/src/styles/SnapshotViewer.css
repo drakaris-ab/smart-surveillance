@@ -1,0 +1,94 @@
+.snapshot-viewer-empty {
+  color: #d1d5db;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.snapshot-viewer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.snapshot-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.snapshot-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.snapshot-card.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 80vw;
+  max-width: 800px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border: 4px solid white;
+}
+
+.snapshot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.snapshot-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.snapshot-label {
+  color: white;
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+
+.spinner-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  border: 10px solid #1e3a8a;
+  border-top: 10px solid #fff;
+  border-radius: 80%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+.spinner-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;   /* adjust size */
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* avoid blocking clicks */
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+

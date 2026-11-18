@@ -1,0 +1,23 @@
+{
+  "apiBaseUrl": "http://127.0.0.1",
+  "port": 8000,
+  "cameraStreamUrl": "http://127.0.0.1:8000/detection/stream",
+  "alertsEndpoint": "/alerts/",
+  "zonesEndpoint": "/zones/",
+
+  "twilioSid": "${TWILIO_SID}",
+  "twilioAuth": "${TWILIO_AUTH_TOKEN}",
+  "fromWhatsapp": "whatsapp:+14155238886",
+
+  "backendBase": "http://127.0.0.1:8000",
+  "alertSoundPath": "assets/sounds/alert.wav",
+
+  "logging": {
+    "level": "ERROR",
+    "labels": {
+      "activity_logger": "ACTIVITY",
+      "db_logger": "DATABASE"
+    },
+    "output": "both"
+  }
+}

@@ -1,0 +1,30 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+# Core framework
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# Database
+SQLAlchemy==2.0.31
+alembic==1.13.2   # migrations
+
+# Pydantic v2
+pydantic==2.7.4
+pydantic-core==2.18.4
+
+# Environment configuration
+python-dotenv==1.0.1
+
+# Logging
+json-log-formatter==0.5.2
+
+# Image processing + embeddings
+opencv-python==4.10.0.84
+numpy==1.26.4
+insightface==0.7.3
+onnxruntime-gpu==1.18.1
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
+torchaudio==2.0.2+cu118
+
+# Utilities
+scikit-learn==1.5.1

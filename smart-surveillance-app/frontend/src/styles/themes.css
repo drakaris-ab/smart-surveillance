@@ -1,0 +1,55 @@
+/* ====== Light Theme ====== */
+.light-theme {
+  --background-color: #fafafa;
+  --text-color: #333;
+  --card-background: #fff;
+  --header-background: linear-gradient(135deg, #2196f3, #0d47a1);
+  --header-text-color: #fff;
+  --sidebar-background: #f5f5f5;
+  --sidebar-text-color: #0d47a1;
+  --link-hover-color: #2196f3;
+  --border-color: #ddd;
+}
+
+/* ====== Dark Theme ====== */
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --card-background: #1e1e1e;
+  --header-background: linear-gradient(135deg, #0d47a1, #000);
+  --header-text-color: #fff;
+  --sidebar-background: #1a1a1a;
+  --sidebar-text-color: #e0e0e0;
+  --link-hover-color: #64b5f6;
+  --border-color: #333;
+}
+
+/* ====== Apply Variables ====== */
+body,
+.app-container {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app-header {
+  background: var(--header-background);
+  color: var(--header-text-color);
+}
+
+.sidebar {
+  background: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.round-card,
+.login-card,
+.camera-card {
+  background: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
